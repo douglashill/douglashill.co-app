@@ -16,6 +16,8 @@ let package = Package(
         .iOSApplication(
             name: "douglashill.co",
             targets: ["AppModule"],
+            bundleIdentifier: "co.douglashill.posting-app",
+            teamIdentifier: "3A8QT46Z78",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .placeholder(icon: .pencil),
