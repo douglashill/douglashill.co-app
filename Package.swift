@@ -8,18 +8,18 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "My App",
+    name: "douglashill.co",
     platforms: [
         .iOS("17.5")
     ],
     products: [
         .iOSApplication(
-            name: "My App",
+            name: "douglashill.co",
             targets: ["AppModule"],
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .gift),
-            accentColor: .presetColor(.blue),
+            appIcon: .placeholder(icon: .pencil),
+            accentColor: .presetColor(.indigo),
             supportedDeviceFamilies: [
                 .pad,
                 .phone
