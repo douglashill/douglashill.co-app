@@ -4,6 +4,11 @@ import SwiftUI
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onOpenURL(perform: { url in
+                    Task.detached { 
+                        try! await XCallbackURLHandler.shared.handleURL(url)    
+                    }
+                })
         }
     }
 }

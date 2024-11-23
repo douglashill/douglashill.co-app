@@ -24,7 +24,14 @@ struct ContentView: View {
                     }
                     ToolbarItem(placement: .confirmationAction) { 
                         Button("Post") {
-                            print("Post the thing here")
+                            Task.detached {
+                                try await XCallbackURLHandler.shared.openXCallbackURL(scheme: "shortcuts", path: "run-shortcut", queryItems: [
+                                    URLQueryItem(name: "name", value: "Basic all caps"),
+                                    URLQueryItem(name: "input", value: "text"),
+                                    URLQueryItem(name: "text", value: textToPost),
+                                ])
+                                print("Finished!!!!")
+                            }
                         }
                     }
                 }
