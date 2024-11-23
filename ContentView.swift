@@ -33,6 +33,7 @@ struct ContentView: View {
                                 print("Finished!!!!")
                             }
                         }
+                        .disabled(textToPost.isEmpty)
                     }
                 }
         }
